@@ -143,4 +143,6 @@ $ kubectl delete deploy loki-medium-logs
 https://grafana.com/grafana/dashboards/15141-kubernetes-service-logs/
 https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus/
 
+eksctl get cluster --region ap-south-1(to know the name of cluster running)
 
+eksctl delete  cluster --region ap-south-1 --name Harsh1998(to delete the cluster after done)
