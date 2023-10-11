@@ -18,6 +18,8 @@ access / secrey key
 https://github.com/eksctl-io/eksctl/releases/tag/v0.161.0
 
 
+to download kubectl curl.exe -LO "https://dl.k8s.io/release/v1.28.2/bin/windows/amd64/kubectl.exe" 
+
 7. cd C:\Program Files\Kubernetes
 
 8. install kubernetes over AWS cloud
