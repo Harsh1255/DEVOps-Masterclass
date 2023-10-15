@@ -59,7 +59,7 @@ apiVersion: jenkins.io/v1alpha2
 kind: Jenkins
 metadata:
   name: example
-  namespace: lwns
+  namespace: harsh1998
 spec:
   configurationAsCode:
     configurations: []
