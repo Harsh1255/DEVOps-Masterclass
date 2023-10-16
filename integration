@@ -32,9 +32,9 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 
 https://github.com/helm/helm/releases(helm download link)
 
-$ kubectl create namespace lwns
+$ kubectl create namespace harsh25
 $ ./helm.exe  repo add jenkins https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
-$ ./helm.exe install my-jenkins-operator jenkins/jenkins-operator -n lwns --set jenkins.enabled=false
+$ ./helm.exe install my-jenkins-operator jenkins/jenkins-operator -n harsh25 --set jenkins.enabled=false
 
  kubectl --namespace harsh123 get pods -w
 
