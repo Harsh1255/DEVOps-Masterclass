@@ -23,37 +23,30 @@ to download kubectl curl.exe -LO "https://dl.k8s.io/release/v1.28.2/bin/windows/
 7. cd C:\Program Files\Kubernetes
 
 8. install kubernetes over AWS cloud
-# eksctl create cluster --name vimal12345 --region ap-southeast-1
+# eksctl create cluster --name harsh1998 --region ap-southeast-1
 
 9. install kubectl to connect to kubernetes
 https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 
 10. connect check : kubectl get nodes
 
-# devops_workshop_eks_jenkins_loki_operator
-
-
-$ eksctl create cluster --name mycluster1 --region=us-east-1
-$ eksctl get  cluster --name mycluster1 --region=us-east-1
-$ kubectl get nodes
-
-kubectl create -f \
-https://raw.githubusercontent.com/operator-framework/operator-lifecycle-manager/master/deploy/upstream/quickstart/crds.yaml
-kubectl create -f \
-https://raw.githubusercontent.com/operator-framework/operator-lifecycle-manager/master/deploy/upstream/quickstart/olm.yaml
-
-kubectl get catalogsources -n olm
-kubectl get packagemanifests -l catalog=operatorhubio-catalog
-
-https://github.com/helm/helm/releases
+https://github.com/helm/helm/releases(helm download link)
 
 $ kubectl create namespace lwns
 $ ./helm.exe  repo add jenkins https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
 $ ./helm.exe install my-jenkins-operator jenkins/jenkins-operator -n lwns --set jenkins.enabled=false
 
+ kubectl --namespace harsh123 get pods -w
+
+$ kubectl --namespace lwns get secret jenkins-operator-credentials-example -o 'jsonpath={.data.user}' | base64 -d
+$ kubectl --namespace lwns get secret jenkins-operator-credentials-example -o 'jsonpath={.data.password}' | base64 -d
+
+$ kubectl --namespace lwns port-forward jenkins-example 8080:8080
+
+
 $ kubectl --namespace lwns get pods -w
 
-
+$ notepad myjenkins.yml
 $ harsh jenkins_instance.yaml
 apiVersion: jenkins.io/v1alpha2
 kind: Jenkins
@@ -113,12 +106,8 @@ spec:
 
 
 $ kubectl create -f jenkins_instance.yaml
-$ kubectl --namespace lwns get pods -w
+$ kubectl --namespace harsh123 get pods -w
 
-$ kubectl --namespace lwns get secret jenkins-operator-credentials-example -o 'jsonpath={.data.user}' | base64 -d
-$ kubectl --namespace lwns get secret jenkins-operator-credentials-example -o 'jsonpath={.data.password}' | base64 -d
-
-$ kubectl --namespace lwns port-forward jenkins-example 8080:8080
 
 
 $ ./helm.exe  repo add grafana https://grafana.github.io/helm-charts
